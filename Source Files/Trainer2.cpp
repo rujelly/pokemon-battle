@@ -4,10 +4,10 @@ using namespace std;
 
 class Trainer1 : public Trainer {
 public:
-    void caputrePokemon(string filepath);
+    void capturePokemon(string filepath);
     void setupBooster();
     Pokemon* getNxtPokemon(int opponentHealth,
-                           int opponentSpeed,
+         				   int opponentSpeed,
                            int opponentStrength,
                            PokemonType attribute1,
                            PokemonType attribute2);
