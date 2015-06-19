@@ -21,13 +21,31 @@ public:
             int defense,
             int strength
             );
-    string getName();
-    bool fainted();
-    int remainingHealth();
-    void damageTaken(int amount);
+    string getName() {
+        return name;
+    }
+    // determine if Pokemon has fainted
+    bool fainted() {
+        if(currentHealth <= 0) {
+            return true;
+        }
+        return false;
+    }
+    int remainingHealth() {
+        return currentHealth;
+    }
+    // subtract damage from Pokemon's health
+    void damageTaken(int amount) {
+        currentHealth -= amount;
+    }
+    // TODO this method
     int attack();
-    int getSpeed();
-    int getDefense();
+    int getSpeed() {
+        return speed;
+    }
+    int getDefense() {
+        return defense;
+    }
 };
 
 Pokemon::Pokemon(string name,
