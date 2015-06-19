@@ -6,4 +6,4 @@ class Pokeball {
 public:
     Pokemon *content;
     Pokeball *next;
-}
+};
