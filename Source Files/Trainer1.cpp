@@ -6,13 +6,26 @@ using namespace std;
 class Trainer1 : public Trainer {
 public:
      /* This function reads a csv of Pokemon (including health, speed, and other
-      * attributes) and puts each Pokemon in a Pokeball
+      * attributes) and creates a linked list of Pokeballs
       */
     void capturePokemon(string filepath) {
-        ofstream pokedexFile;
-        pokedexFile.open("Pokedex.csv");
+        string name, move, attribute1, attribute2;
+        int HP, strength, defense, speed;
 
-        // TODO file parsing and creating linked list of Pokeballs
+        ofstream pokedexFile("Pokedex.csv");
+
+        // TODO string->integer and create linked list of Pokeballs
+        if (file.is_open()) {
+            while(getline(file, name, ',')) {
+              getline(file, HP, ',');
+              getline(file, strength, ',');
+              getline(file, defense, ',');
+              getline(file, speed, ',');
+              getline(file, move, ',');
+              getline(file, attribute1, ',');
+              getline(file, attribute2, ',');
+            }
+        }
 
         pokedexFile.close();
     }

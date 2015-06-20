@@ -3,6 +3,8 @@
 #include "Pokeball.h"
 using namespace std;
 
+enum 
+
 class Trainer {
 private:
     Pokeball *Collection;
