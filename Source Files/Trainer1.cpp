@@ -11,10 +11,11 @@ public:
     void capturePokemon(string filepath) {
         string name, move, attribute1, attribute2;
         int HP, strength, defense, speed;
+        Pokeball* pokeballList;
 
         ofstream pokedexFile("../Resources/Pokedex.csv");
 
-        // TODO string->integer and create linked list of Pokeballs
+        // read Pokemon attributes from csv and create list of Pokeballs
         if (file.is_open()) {
             while(getline(file, name, ',')) {
               getline(file, stoi(HP, nullptr, 10), ',');
@@ -24,6 +25,10 @@ public:
               getline(file, move, ',');
               getline(file, attribute1, ',');
               getline(file, attribute2, ',');
+              Pokemon pokemon(name, attribute1, attribute2, 
+                                  HP, speed, defense, strength, move);
+              pokeballList->content = pokemon;
+              pokeballList = pokeballList->next;
             }
         }
 
