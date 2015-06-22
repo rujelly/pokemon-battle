@@ -1,4 +1,5 @@
 #include <iostream>
+#include "BoostType.h"
 using namespace std;
 
 class Boost {
