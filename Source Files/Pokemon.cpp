@@ -18,25 +18,25 @@ Pokemon::Pokemon(string name,
     this->strength = strength;
     move = "";
 }
-string getName::Pokemon() {
+string Pokemon::getName() {
     return name;
 }
 // determine if Pokemon has fainted
-bool fainted::Pokemon() {
+bool Pokemon::fainted() {
     if(currentHealth <= 0) {
     return true;
     }
     return false;
 }
-int remainingHealth::Pokemon() {
+int Pokemon::remainingHealth() {
     return currentHealth;
 }
 // subtract damage from Pokemon's health
-void damageTaken::Pokemon(int amount) {
+void Pokemon::damageTaken(int amount) {
     currentHealth -= amount;
 }
 // returns the Pokemon's type(s) (Fire, Water, etc.)
-PokemonType getAttribute(int id) {
+PokemonType Pokemon::getAttribute(int id) {
     if(id == 1) {
         return attribute1;
     } else if (id == 2) {
@@ -45,17 +45,17 @@ PokemonType getAttribute(int id) {
         return -1;
     }
     // TODO figure out if id is supposed to be 1 and 2 or some other
-    // numbers, and make sure Pokemon w/ only 1 attribute return -1
+    // numbers, and make sure Pokemon w/ only 1 type return -1
 }
-int attack::Pokemon() {
+int Pokemon::attack() {
     // TODO add code for determining a move. Is there a list of moves?
 
     cout << name << " attacks with " << move << endl;
 }
-int getSpeed::Pokemon() {
+int Pokemon::getSpeed() {
     return speed;
 }
-int getDefense::Pokemon() {
+int Pokemon::getDefense() {
     return defense;
 }
 
