@@ -29,3 +29,6 @@ Trainer::Trainer(string name, string residency) {
     this->name = name;
     this->residency = residency;
 }
+Boost* Trainer::getBoosterSetting() {
+    return BoosterTypes;
+}

@@ -12,15 +12,15 @@ public:
         string name, move, attribute1, attribute2;
         int HP, strength, defense, speed;
 
-        ofstream pokedexFile("Pokedex.csv");
+        ofstream pokedexFile("../Resources/Pokedex.csv");
 
         // TODO string->integer and create linked list of Pokeballs
         if (file.is_open()) {
             while(getline(file, name, ',')) {
-              getline(file, HP, ',');
-              getline(file, strength, ',');
-              getline(file, defense, ',');
-              getline(file, speed, ',');
+              getline(file, stoi(HP, nullptr, 10), ',');
+              getline(file, stoi(strength, nullptr, 10), ',');
+              getline(file, stoi(defense, nullptr, 10), ',');
+              getline(file, stoi(speed, nullptr, 10), ',');
               getline(file, move, ',');
               getline(file, attribute1, ',');
               getline(file, attribute2, ',');

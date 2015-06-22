@@ -8,6 +8,7 @@ Pokemon::Pokemon(string name,
             int speed,
             int defense,
             int strength
+            string move;
             ) {
     this->name = name;
     this->attribute1 = attribute1;
@@ -16,7 +17,7 @@ Pokemon::Pokemon(string name,
     this->speed = speed;
     this->defense = defense;
     this->strength = strength;
-    move = "";
+    this->move = move;
 }
 string Pokemon::getName() {
     return name;
@@ -48,8 +49,6 @@ PokemonType Pokemon::getAttribute(int id) {
     // numbers, and make sure Pokemon w/ only 1 type return -1
 }
 int Pokemon::attack() {
-    // TODO add code for determining a move. Is there a list of moves?
-
     cout << name << " attacks with " << move << endl;
 }
 int Pokemon::getSpeed() {

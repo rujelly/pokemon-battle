@@ -20,6 +20,7 @@ public:
             int speed,
             int defense,
             int strength
+            string move;
             );
     string getName();
     bool fainted();
