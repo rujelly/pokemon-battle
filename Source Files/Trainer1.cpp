@@ -13,7 +13,7 @@ public:
         int HP, strength, defense, speed;
         Pokeball* pokeballList;
 
-        ofstream pokedexFile("../Resources/Pokedex.csv");
+        ofstream pokedexFile("../Resources/Pokedex.csv");			// CC: This should be file or change file.is_open() to pokedexFile.   Make it consistent.
 
         // read Pokemon attributes from csv and create list of Pokeballs
         if (file.is_open()) {

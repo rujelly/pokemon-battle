@@ -1,9 +1,10 @@
 #include <iostream>
 #include "Boost.h"
 #include "Pokeball.h"
+
 using namespace std;
 
-enum 
+//enum			// CC: Removed this... Not sure if that's needed 
 
 class Trainer {
 private:
