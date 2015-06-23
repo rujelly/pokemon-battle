@@ -20,28 +20,40 @@ public:
 // CC: For each class, create a constructor to help with the loading
 //     SpeedBoost(string name, int consumption) { ... }
 class SpeedBoost : public Boost {
-	public:
-	    string name;
-	    BoostType type;
-	    int slotConsumption;
-	    Boost *nextItem;
-	    int getBoostAmt(int maxHP, int speed, int attack, int defense);
-	};
+public:
+	string name;
+	BoostType type;
+	int slotConsumption;
+	Boost *nextItem;
+	int getBoostAmt(int maxHP, int speed, int attack, int defense);
+};
+
+SpeedBoost::SpeedBoost() {
+
+}
 	
-	class StrengthBoost : public Boost {
-	public:
-	    string name;
-	    BoostType type;
-	    int slotConsumption;
-	    Boost *nextItem;
-	    int getBoostAmt(int maxHP, int speed, int attack, int defense);
-	};
+class StrengthBoost : public Boost {
+public:
+	string name;
+	BoostType type;
+	int slotConsumption;
+	Boost *nextItem;
+	int getBoostAmt(int maxHP, int speed, int attack, int defense);
+};
+
+StrengthBoost::StrengthBoost() {
+
+}
+
+class DefenseBoost : public Boost {
+public:
+	string name;
+	BoostType type;
+	int slotConsumption;
+	Boost *nextItem;
+	int getBoostAmt(int maxHP, int speed, int attack, int defense);
+};
+
+DefenseBoost::DefenseBoost() {
 	
-	class DefenseBoost : public Boost {
-	public:
-	    string name;
-	    BoostType type;
-	    int slotConsumption;
-	    Boost *nextItem;
-	    int getBoostAmt(int maxHP, int speed, int attack, int defense);
-	};
+}
