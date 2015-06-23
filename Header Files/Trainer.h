@@ -4,8 +4,6 @@
 
 using namespace std;
 
-//enum			// CC: Removed this... Not sure if that's needed 
-
 class Trainer {
 private:
     Pokeball *Collection;
