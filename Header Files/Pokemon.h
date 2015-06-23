@@ -1,5 +1,4 @@
 #include <iostream>
-
 using namespace std;
 
 typedef enum {
@@ -23,7 +22,7 @@ typedef enum {
 
 class Pokemon {
 private:
-    std::string name;				// CC: Adding std:: will resolve any ambiguous type
+    std::string name;
     PokemonType attribute1;
     PokemonType attribute2;
     int maxHealth;
@@ -31,24 +30,23 @@ private:
     int speed;
     int defense;
     int strength;
-    std::string move;				// CC: Adding std:: will resolve any ambiguous type
+    std::string move;
 public:
-    Pokemon(std::string name,		// CC: Adding std:: will resolve any ambiguous type
+    Pokemon(std::string name,
             PokemonType attribute1,
             PokemonType attribute2,
             int maxHealth,
             int speed,
             int defense,
-            int strength			// CC: Missing comma here
-            std::string move;		// CC: Addint std::string will resolve this; or add using namespace std on the top.  And remove the semi-colon.
+            int strength
+            std::string move
             );
-    std::string getName();			// CC: Adding std:: will resolve any ambiguous type
+    std::string getName();
     bool fainted();
     int remainingHealth();
     void damageTaken(int amount);
     int attack();
     int getSpeed();
     int getDefense();
-
-								// CC: Missing function getAttribute(int id) in the forward declaration. 
+    int getAttribute(int id); 
 };

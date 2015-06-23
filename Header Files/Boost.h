@@ -1,13 +1,11 @@
 #include <iostream>
-//#include "BoostType.h"		// CC: Please remove, we'll have the BoostType with Boost class. 
 using namespace std;
 
-
-typedef enum {					// CC: I only want the primary type: SPEED, ATTACK, DEFENSE
+typedef enum {
 	SPEED,
 	ATTACK,
 	DEFENSE
-} BoostType;					// CC: It is BoostType and not BoosterType
+} BoostType;
 
 class Boost {
 public:
