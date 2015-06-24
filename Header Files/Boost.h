@@ -14,7 +14,8 @@ public:
     int slotConsumption;
     Boost *nextItem;
 
-    Boost::Boost();
+    // TODO decide if constructor will take type as BoostType or string then convert later
+    Boost::Boost(string name, BoostType type, int slotConsumption);
     int getBoostAmt(int maxHP, int speed, int attack, int defense);
 };
 
