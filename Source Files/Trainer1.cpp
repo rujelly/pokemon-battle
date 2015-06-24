@@ -12,11 +12,11 @@ public:
         string name, move, attribute1, attribute2;
         int HP, strength, defense, speed;
         Pokeball* pokeballList;
-
-        ofstream pokedexFile("../Resources/Pokedex.csv");			// CC: This should be file or change file.is_open() to pokedexFile.   Make it consistent.
+        
+        ofstream pokedexFile("../Resources/Pokedex.csv");
 
         // read Pokemon attributes from csv and create list of Pokeballs
-        if (file.is_open()) {
+        if (pokedexFile.is_open()) {
             while(getline(file, name, ',')) {
               getline(file, stoi(HP, nullptr, 10), ',');
               getline(file, stoi(strength, nullptr, 10), ',');

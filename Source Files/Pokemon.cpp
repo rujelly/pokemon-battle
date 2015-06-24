@@ -1,5 +1,4 @@
 #include "Pokemon.h"
-// #include "PokemonType.h"		// CC: You can comment this out now because it is included in Pokemon.h
 
 Pokemon::Pokemon(string name,
             PokemonType attribute1,
@@ -7,8 +6,8 @@ Pokemon::Pokemon(string name,
             int maxHealth,
             int speed,
             int defense,
-            int strength,				// CC: comma is needed here
-            std::string move			// CC: likewise, please add std:: to the front
+            int strength,
+            std::string move
             ) {
     this->name = name;
     this->attribute1 = attribute1;
@@ -49,8 +48,8 @@ PokemonType Pokemon::getAttribute(int id) {
     // numbers, and make sure Pokemon w/ only 1 type return -1
 }
 int Pokemon::attack() {
-    std::cout << name << " attacks with " << move << std::endl;		// CC: std:: is required for cout and cin; or add using namespace std; at the top
-	return move;													// CC: Please return move
+    std::cout << name << " attacks with " << move << std::endl;	
+	return move;
 }
 int Pokemon::getSpeed() {
     return speed;

@@ -13,7 +13,7 @@ public:
     Pokeball(Pokemon *pokemon);
 };
 
-// CC: Think about having a constructor and destructor to help with initialization and deleting of heap objects
+// TODO create destructor to help with initialization and deleting of heap objects
 Pokeball::Pokeball(Pokemon *pokemon) {
 	this->content = pokemon;
 }

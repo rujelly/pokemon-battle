@@ -22,9 +22,6 @@ public:
     int getBoostAmt(int maxHP, int speed, int attack, int defense);
 };
 
-// CC: Have the derived class be here.  The definitions can be in the Boost.cpp
-// CC: For each class, create a constructor to help with the loading
-//     SpeedBoost(string name, int consumption) { ... }
 class SpeedBoost : public Boost {
 public:
 	string name;
