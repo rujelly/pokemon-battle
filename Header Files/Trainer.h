@@ -1,3 +1,6 @@
+#ifndef TRAINER_H
+#define TRAINER_H
+
 #include <iostream>
 #include "Boost.h"
 #include "Pokeball.h"
@@ -31,3 +34,5 @@ Trainer::Trainer(string name, string residency) {
 Boost* Trainer::getBoosterSetting() {
     return BoosterTypes;
 }
+
+#endif

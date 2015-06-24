@@ -1,3 +1,6 @@
+#ifndef BOOST_H
+#define BOOST_H
+
 #include <iostream>
 using namespace std;
 
@@ -29,7 +32,7 @@ public:
 	int slotConsumption;
 	Boost *nextItem;
 
-	SpeedBoost::SpeedBoost();
+	SpeedBoost::SpeedBoost(string name, BoostType type, int slotConsumption);
 	int getBoostAmt(int maxHP, int speed, int attack, int defense);
 };
 	
@@ -40,7 +43,7 @@ public:
 	int slotConsumption;
 	Boost *nextItem;
 
-	StrengthBoost::StrengthBoost();
+	StrengthBoost::StrengthBoost(string name, BoostType type, int slotConsumption);
 	int getBoostAmt(int maxHP, int speed, int attack, int defense);
 };
 
@@ -51,6 +54,8 @@ public:
 	int slotConsumption;
 	Boost *nextItem;
 
-	DefenseBoost::DefenseBoost();
+	DefenseBoost::DefenseBoost(string name, BoostType type, int slotConsumption);
 	int getBoostAmt(int maxHP, int speed, int attack, int defense);
 };
+
+#endif

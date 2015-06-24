@@ -1,3 +1,6 @@
+#ifndef POKEMON_H
+#define POKEMON_H
+
 #include <iostream>
 using namespace std;
 
@@ -50,3 +53,5 @@ public:
     int getDefense();
     int getAttribute(int id); 
 };
+
+#endif
