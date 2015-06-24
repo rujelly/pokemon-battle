@@ -13,6 +13,8 @@ public:
     BoostType type;
     int slotConsumption;
     Boost *nextItem;
+
+    Boost::Boost();
     int getBoostAmt(int maxHP, int speed, int attack, int defense);
 };
 
@@ -25,12 +27,10 @@ public:
 	BoostType type;
 	int slotConsumption;
 	Boost *nextItem;
+
+	SpeedBoost::SpeedBoost();
 	int getBoostAmt(int maxHP, int speed, int attack, int defense);
 };
-
-SpeedBoost::SpeedBoost() {
-
-}
 	
 class StrengthBoost : public Boost {
 public:
@@ -38,12 +38,10 @@ public:
 	BoostType type;
 	int slotConsumption;
 	Boost *nextItem;
+
+	StrengthBoost::StrengthBoost();
 	int getBoostAmt(int maxHP, int speed, int attack, int defense);
 };
-
-StrengthBoost::StrengthBoost() {
-
-}
 
 class DefenseBoost : public Boost {
 public:
@@ -51,9 +49,7 @@ public:
 	BoostType type;
 	int slotConsumption;
 	Boost *nextItem;
+
+	DefenseBoost::DefenseBoost();
 	int getBoostAmt(int maxHP, int speed, int attack, int defense);
 };
-
-DefenseBoost::DefenseBoost() {
-	
-}
