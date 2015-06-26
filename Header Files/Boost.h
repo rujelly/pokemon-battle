@@ -17,9 +17,10 @@ public:
     int slotConsumption;
     Boost *nextItem;
 
-    // TODO decide if constructor will take type as BoostType or string then convert later
-    Boost::Boost(string name, BoostType type, int slotConsumption);
-    int getBoostAmt(int maxHP, int speed, int attack, int defense);
+    Boost(string name, BoostType type, int slotConsumption);
+    virtual int getBoostAmt(int maxHP, int speed, int attack, int defense) {
+    	return 0;
+    }
 };
 
 class SpeedBoost : public Boost {
@@ -29,7 +30,7 @@ public:
 	int slotConsumption;
 	Boost *nextItem;
 
-	SpeedBoost::SpeedBoost(string name, BoostType type, int slotConsumption);
+	SpeedBoost(string name, BoostType type, int slotConsumption);
 	int getBoostAmt(int maxHP, int speed, int attack, int defense);
 };
 	
@@ -40,7 +41,7 @@ public:
 	int slotConsumption;
 	Boost *nextItem;
 
-	StrengthBoost::StrengthBoost(string name, BoostType type, int slotConsumption);
+	StrengthBoost(string name, BoostType type, int slotConsumption);
 	int getBoostAmt(int maxHP, int speed, int attack, int defense);
 };
 
@@ -51,7 +52,7 @@ public:
 	int slotConsumption;
 	Boost *nextItem;
 
-	DefenseBoost::DefenseBoost(string name, BoostType type, int slotConsumption);
+	DefenseBoost(string name, BoostType type, int slotConsumption);
 	int getBoostAmt(int maxHP, int speed, int attack, int defense);
 };
 

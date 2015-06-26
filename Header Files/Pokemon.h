@@ -25,7 +25,7 @@ typedef enum {
 
 class Pokemon {
 private:
-    std::string name;
+    string name;
     PokemonType attribute1;
     PokemonType attribute2;
     int maxHealth;
@@ -33,18 +33,18 @@ private:
     int speed;
     int defense;
     int strength;
-    std::string move;
+    string move;
 public:
-    Pokemon(std::string name,
+    Pokemon(string name,
             PokemonType attribute1,
             PokemonType attribute2,
             int maxHealth,
             int speed,
             int defense,
             int strength
-            std::string move
+            string move
             );
-    std::string getName();
+    string getName();
     bool fainted();
     int remainingHealth();
     void damageTaken(int amount);

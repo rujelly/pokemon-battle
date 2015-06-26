@@ -1,5 +1,7 @@
 #include "Pokemon.h"
 
+using namespace std;
+
 Pokemon::Pokemon(string name,
             PokemonType attribute1,
             PokemonType attribute2,
@@ -7,7 +9,7 @@ Pokemon::Pokemon(string name,
             int speed,
             int defense,
             int strength,
-            std::string move
+            string move
             ) {
     this->name = name;
     this->attribute1 = attribute1;
@@ -48,7 +50,7 @@ PokemonType Pokemon::getAttribute(int id) {
     // numbers, and make sure Pokemon w/ only 1 type return -1
 }
 int Pokemon::attack() {
-    std::cout << name << " attacks with " << move << std::endl;	
+    cout << name << " attacks with " << move << endl;	
 	return move;
 }
 int Pokemon::getSpeed() {

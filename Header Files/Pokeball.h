@@ -11,6 +11,7 @@ public:
     Pokeball *next;
 
     Pokeball(Pokemon *pokemon);
+    ~Pokeball();
 };
 
 // TODO create destructor to help with initialization and deleting of heap objects
