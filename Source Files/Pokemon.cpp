@@ -61,7 +61,7 @@ int Pokemon::getSpeed() {
     return speed;
 }
 int Pokemon::getStrength() {
-
+    return strength;
 }
 int Pokemon::getDefense() {
     return defense;

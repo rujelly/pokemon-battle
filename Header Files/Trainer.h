@@ -28,29 +28,54 @@ public:
                            PokemonType attribute1,
                            PokemonType attribute2);
     virtual Pokemon* selectFirstPokemon();
+    void deleteCollection(Pokeball* collectionPtr);
 };
 
 Trainer::Trainer() {
-
+    name = "Andrew Roman";
+    city = "Tempe";
 }
 Trainer::Trainer(string name, string residency) {
     this->name = name;
     this->residency = residency;
 }
+Trainer::~Trainer() {
+    deleteCollection(Collection);
+    Collection = NULL;
+
+    // TODO delete BoosterTypes (also a linked list)
+}
 Boost* Trainer::getBoosterSetting() {
     return BoosterTypes;
 }
-// TODO define methods in Trainer class or only define in Trainer 1 and 2?
+void Trainer::deleteCollection(Pokeball* collectionPtr) {
+    if(collectionPtr != NULL) {
+        deleteCollection(collectionPtr->next);
+        delete(collectionPtr);
+    }
+}
 
-// TODO decide whether this code is necessary or not
-/*class Trainer1 : public Trainer {
+class Trainer1 : public Trainer {
 public:
-  Trainer1();
+    // constructors
+    Trainer1() : Trainer("Andrew Roman", "Tempe") {
 
-  ~Trainer1();
+    }
+    Trainer1(string name, string residency) : Trainer(name, residency) {
 
-  Trainer1(string name, string residency);
-};
+    }
+
+    // methods
+    void capturePokemon(string filepath);
+    // TODO these 3 mehods
+    void setupBooster();
+    Pokemon* getNxtPokemon(int opponentHealth, // signature is different from instructor's
+                          int opponentSpeed,
+                          int opponentStrength,
+                          PokemonType attribute1,
+                          PokemonType attribute2);
+    Pokemon* selectFirstPokemon();
+};  
 
 class Trainer2 : public Trainer {
 public:
@@ -59,6 +84,6 @@ public:
   ~Trainer2(); 
 
   Trainer2(string name, string residency);
-};*/
+};
 
 #endif

@@ -10,13 +10,12 @@ public:
     Pokemon *content;
     Pokeball *next;
 
-    Pokeball(Pokemon *pokemon);
-    ~Pokeball();
+    Pokeball(Pokemon *pokemon) {
+    	this->content = pokemon;
+    }
+    ~Pokeball() {
+    	delete(content);
+    }
 };
-
-// TODO create destructor to help with initialization and deleting of heap objects
-Pokeball::Pokeball(Pokemon *pokemon) {
-	this->content = pokemon;
-}
 
 #endif
