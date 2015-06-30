@@ -15,6 +15,7 @@ Pokemon::Pokemon(string name,
     this->attribute1 = attribute1;
     this->attribute2 = attribute2;
     this->maxHealth = maxHealth;
+    this->currentHealth = maxHealth;
     this->speed = speed;
     this->defense = defense;
     this->strength = strength;
@@ -33,6 +34,9 @@ bool Pokemon::fainted() {
 int Pokemon::remainingHealth() {
     return currentHealth;
 }
+int Pokemon::getMaxHealth() {
+    return maxHealth
+}
 // subtract damage from Pokemon's health
 void Pokemon::damageTaken(int amount) {
     currentHealth -= amount;
@@ -49,12 +53,15 @@ PokemonType Pokemon::getAttribute(int id) {
     // TODO figure out if id is supposed to be 1 and 2 or some other
     // numbers, and make sure Pokemon w/ only 1 type return -1
 }
-int Pokemon::attack() {
+string Pokemon::attack() {
     cout << name << " attacks with " << move << endl;	
 	return move;
 }
 int Pokemon::getSpeed() {
     return speed;
+}
+int Pokemon::getStrength() {
+
 }
 int Pokemon::getDefense() {
     return defense;

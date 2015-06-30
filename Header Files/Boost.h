@@ -1,7 +1,6 @@
 #ifndef BOOST_H
 #define BOOST_H
 
-#include <iostream>
 using namespace std;
 
 typedef enum {
@@ -17,43 +16,28 @@ public:
     int slotConsumption;
     Boost *nextItem;
 
-    Boost(string name, BoostType type, int slotConsumption);
-    virtual int getBoostAmt(int maxHP, int speed, int attack, int defense) {
+    Boost(string name, int slotConsumption, BoostType type);
+    virtual int getBoostAmt(int hp, int speed, int attack, int defense) {
     	return 0;
     }
 };
 
 class SpeedBoost : public Boost {
 public:
-	string name;
-	BoostType type;
-	int slotConsumption;
-	Boost *nextItem;
-
-	SpeedBoost(string name, BoostType type, int slotConsumption);
-	int getBoostAmt(int maxHP, int speed, int attack, int defense);
+	SpeedBoost(string name, int slotConsumption);
+	int getBoostAmt(int hp, int speed, int attack, int defense);
 };
 	
 class StrengthBoost : public Boost {
 public:
-	string name;
-	BoostType type;
-	int slotConsumption;
-	Boost *nextItem;
-
-	StrengthBoost(string name, BoostType type, int slotConsumption);
-	int getBoostAmt(int maxHP, int speed, int attack, int defense);
+	StrengthBoost(string name, int slotConsumption);
+	int getBoostAmt(int hp, int speed, int attack, int defense);
 };
 
 class DefenseBoost : public Boost {
 public:
-	string name;
-	BoostType type;
-	int slotConsumption;
-	Boost *nextItem;
-
-	DefenseBoost(string name, BoostType type, int slotConsumption);
-	int getBoostAmt(int maxHP, int speed, int attack, int defense);
+	DefenseBoost(string name, int slotConsumption);
+	int getBoostAmt(int hp, int speed, int attack, int defense);
 };
 
 #endif

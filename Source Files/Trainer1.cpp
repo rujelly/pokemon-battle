@@ -5,10 +5,19 @@ using namespace std;
 
 class Trainer1 : public Trainer {
 public:
+    // constructors
+    Trainer1() : Trainer("Trainer 1 Name", "Trainer 1 City") {
+
+    }
+    Trainer1(string name, string residency) : Trainer(name, residency) {
+
+    }
+
+    // methods
     void capturePokemon(string filepath);
     // TODO these 3 mehods
     void setupBooster();
-    Pokemon* getNxtPokemon(int opponentHealth,
+    Pokemon* getNxtPokemon(int opponentHealth, // signature is different from instructor's
                           int opponentSpeed,
                           int opponentStrength,
                           PokemonType attribute1,

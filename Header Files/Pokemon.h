@@ -46,11 +46,13 @@ public:
             );
     string getName();
     bool fainted();
-    int remainingHealth();
+    int healthRemaining();
+    int getMaxHealth();
     void damageTaken(int amount);
-    int attack();
+    string attack();
     int getSpeed();
     int getDefense();
+    int getStrength();
     int getAttribute(int id); 
 };
 
